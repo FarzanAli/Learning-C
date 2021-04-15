@@ -1,15 +1,3 @@
-/*******************************************************************************
-*
-* Purpose: Assignment #6 starter code.
-*
-* Description: This code includes all the linked list functions we defined 
-* in lecture or in lab.  See the assignment document to understand the 
-* additional code you are required to write.  
-*
-* Author: Kevin Browne
-*
-*******************************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -21,7 +9,7 @@ typedef struct node {
   struct node *next; // points to the next node in the list, NULL for tail node
 } Node;
 
-// Library of functions for working with linked lists created in week 7 lectures
+// Library of functions for working with linked lists.
 void print_list(Node *head);
 Node* insert_at_head(Node *head, int new_value);
 Node* insert_at_tail(Node *head, int new_value);
@@ -35,13 +23,11 @@ void replace_matches(Node *node, int find_value, int replace_value);
 Node *delete_first_match(Node *head, int delete_value, bool *was_deleted);
 Node *delete_all_matches(Node *head, int delete_value, int *num_deleted);
 
-// More functions for working with linked lists created during week 8 labs
 Node *append_list(Node *head1, Node *head2);
 Node *reverse_list(Node *head);
 void sort_list(Node *head);
 void delete_duplicates(Node *head);
 
-// Functions to implement (merge_sorted_lists is a bonus, it is not required)
 void add_lists(Node *list1, Node *list2);
 Node *duplicate_list(Node *head);
 Node *efficient_delete_match(Node *head, int delete_value, int *num_deleted);
@@ -140,35 +126,7 @@ int main()
   toc = clock();
   printf("efficient_delete_match: %fs\n", (double)(toc - tic) / CLOCKS_PER_SEC);
   printf("elements deleted: %d\n\n", num_deleted);
-
-
-  // BONUS: Test merge_sorted_lists to see if it is able to merge two sorted 
-  // lists correctly by creating two lists of length 10 with random values 
-  // between 0 and 98.
-  printf("\nmerge_sorted_lists test\n");
-  printf("****************************************\n");
-  srand(time(NULL));
-  Node *list11 = NULL;
-  Node *list12 = NULL;
-  for (int i = 0; i < 10; i++) list11 = insert_at_head(list11, rand() % 99);
-  for (int i = 0; i < 10; i++) list12 = insert_at_head(list12, rand() % 99);
-  sort_list(list11);
-  sort_list(list12);
-  printf("\nList 11...\n");
-  print_list(list11);
-  printf("\nList 12...\n");
-  print_list(list12);
-  Node *newhead = merge_sorted_lists(list11, list12);
-  printf("\nMerged list...\n");
-  print_list(newhead);
-
 }
-
-/*******************************************************************************
- * 
- * ASSIGNMENT #6 - WRITE YOUR FUNCTIONS HERE
- * 
- * ****************************************************************************/
 
 void add_lists(Node *list1, Node *list2){
   if(list1 != NULL && list2 != NULL) list1->value += list2->value;
@@ -255,12 +213,6 @@ Node *merge_sorted_lists(Node *list1, Node *list2){
    }
    return result;
 }
-
-/*******************************************************************************
- * 
- * The functions below were created during the week 8 labs.
- * 
- * ****************************************************************************/
 
 // Appends the list beginning with head2 to the tail of the list beginning with 
 // head1, returns the potentially new head of the list.
@@ -393,13 +345,6 @@ void delete_duplicates(Node *head)
   }
 }
 
-
-/*******************************************************************************
- * 
- * The below functions were created during week 7 in-lecture and are identical
- * to the code posted under Week 7.
- * 
- * ****************************************************************************/
 
 // Deletes all nodes with a value matching delete_value in a linked list 
 // starting with *head, repeatedly calls delete_first_match until no mathces 

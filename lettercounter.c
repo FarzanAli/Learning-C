@@ -12,6 +12,7 @@ int main(void){
     float percentage[26];
 
     //Taking input for text for analysis using getchar().
+    printf("Enter text for analysis: ");
     while(1){
         input = getchar();
         if(input == '\n'){

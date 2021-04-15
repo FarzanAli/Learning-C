@@ -1,14 +1,3 @@
-/*******************************************************************************
-*
-* Purpose: Assignment #7 Starter Code
-*
-* Description: This binary search tree contains no duplicates.  This file 
-* contains all functions created during the week 8 lectures and week 9 
-* tutorials.
-*
-* Author: Kevin Browne
-*
-*******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -24,8 +13,7 @@ typedef struct node {
   struct node *right_child; 
 } bstNode;
 
-
-// Functions created during week 8 lectures 
+//Functions for working with bst
 void simple_print(bstNode *node, int depth);
 bool verifyBST(bstNode *node, int minkey, int maxkey);
 bstNode* create_node(int new_key);
@@ -34,28 +22,14 @@ int find_minimum(bstNode *node);
 int find_maximum(bstNode *node);
 bool is_member(bstNode *node, int find_key);
 bstNode *delete(bstNode *node, int delete_key, bool *was_deleted);
-
-// Functions created during week 9 labs
 void pre_order(bstNode *node);
 void in_order(bstNode *node);
 void reverse_in_order(bstNode *node);
 void post_order(bstNode *node);
 int num_nodes(bstNode *node);
 void breadth_first(bstNode *node);
-
-
-// Functions to implement for Assignment #7 
-
-// HINT: This function was used as a helper function for array_of_sorted_keys
-// in the instructor's solution:
-// void build_array(bstNode *node, int *array, int *current_index);
 int *array_of_sorted_keys(bstNode *node);
-
-// HINT: This function was used as a helper function for 
-// balanced_tree_from_sorted_array in the instructor's solution:
-// bstNode *construct_tree(int *array, int min, int max);
 bstNode *balanced_tree_from_sorted_array(int *sorted_array, int length);
-
 bstNode *balanced_tree_copy(bstNode *tree);
 
 
@@ -95,10 +69,6 @@ int main()
   printf("\n\nPrint out of the now balanced tree: \n");
   simple_print(balance, 0);
 }
-
-
-
-// Assignment #7 solution code goes here
 
 void traverseInOrder(bstNode *node, int *array, int *index){
   if (node == NULL)return;
