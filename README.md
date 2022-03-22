@@ -1,5 +1,5 @@
 # Learning-C
-Series of small projects completed in C to help learn the language.
+Series of small projects completed in C to help learn the language (University course).
 
 **invest.c**:
 Calculates annual investment returns given initial investment, interest rate, additional contributions, time length (years). Prints results in formatted table.
