@@ -1,5 +1,5 @@
 # Learning-C
-Series of small projects completed in C to help learn the language (for COMPSCI 1XC3).
+Series of small projects completed in C to help learn the language (for [COMPSCI 1XC3](https://academiccalendars.romcmaster.ca/preview_course_nopop.php?catoid=44&coid=229938)).
 
 **invest.c:**
 Calculates annual investment returns given initial investment, interest rate, additional contributions, time length (years). Prints results in formatted table.
