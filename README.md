@@ -5,6 +5,10 @@ Series of small projects completed in C to help learn the language (for [COMPSCI
 Calculates annual investment returns given initial investment, interest rate, additional contributions, time length (years). Prints results in formatted table.
 Learned about operations, loops, output.
 
+<img width="625" alt="Screen Shot 2023-08-09 at 7 27 33 PM" src="https://github.com/FarzanAli/Learning-C/assets/56518530/83ecd9d0-eba5-4619-b784-f2625cae1f64">
+<br/>
+<br/>
+
 **lettercounter.c:**
 Takes text for analysis as input. Calculates total occurrences of each letter, percentage of occurrence in terms of the whole text, most and least frequent letters.
 Prints all calculated information in a formatted table. Learned about strings, input, loops, arrays, output.
