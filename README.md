@@ -5,7 +5,7 @@ Series of small projects completed in C to help learn the language (for [COMPSCI
 Calculates annual investment returns given initial investment, interest rate, additional contributions, time length (years). Prints results in formatted table.
 Learned about operations, loops, output.
 
-<img width="625" alt="Screen Shot 2023-08-09 at 7 27 33 PM" src="https://github.com/FarzanAli/Learning-C/assets/56518530/83ecd9d0-eba5-4619-b784-f2625cae1f64">
+<img width="600" alt="Screen Shot 2023-08-09 at 7 31 39 PM" src="https://github.com/FarzanAli/Learning-C/assets/56518530/034ec836-be84-42b8-8501-94b75afd8c9c">
 <br/>
 <br/>
 
